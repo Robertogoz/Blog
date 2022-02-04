@@ -1,9 +1,9 @@
 const Express = require('express');
-const User = require('./User');
+const User = require('../models/User');
 const router = Express.Router();
 const bcrypt = require('bcryptjs');
 const adminAuth = require('../middleware/adminAuth');
-const Category = require('../Categories/Category');
+const Category = require('../models/Category');
 
 router.get('/admin/users',adminAuth,(req,res) => {
     User.findAll().then(users => {

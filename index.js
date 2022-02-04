@@ -10,13 +10,13 @@ app.use(session({
 }))
 
 // routers
-const categoriesController = require("./Categories/categoriesController");
-const articlesController = require("./Articles/articlesController");
-const userController = require("./Users/usersController");
+const categoriesController = require("./controllers/categoriesController");
+const articlesController = require("./controllers/articlesController");
+const userController = require("./controllers/usersController");
 
 // models
-const Article = require('./Articles/Article');
-const Category = require('./Categories/Category');
+const Article = require('./models/Article');
+const Category = require('./models/Category');
 
 // ejs
 app.set('view engine', 'ejs');
