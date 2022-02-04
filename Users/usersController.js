@@ -38,7 +38,7 @@ router.post('/user/create', adminAuth,(req,res) => {
     });
 });
 
-router.post('/user/delete', adminAuth,(req,res) =>{
+router.delete('/user/delete', adminAuth,(req,res) =>{
     let id = req.body.id;
 
     if(id != undefined) {
@@ -70,7 +70,7 @@ router.get('/admin/users/edit/:id', adminAuth, (req,res) => {
     });
 });
 
-router.post('/user/edit', adminAuth, (req,res) => {
+router.put('/user/edit', adminAuth, (req,res) => {
     let id = req.body.id;
     let email = req.body.email;
     let password = req.body.password;

@@ -29,7 +29,7 @@ router.post('/category/save', adminAuth,(req,res) => {
 	});
 });
 
-router.post('/category/delete', adminAuth,(req,res) => {
+router.delete('/category/delete', adminAuth,(req,res) => {
 	let id = req.body.id;
 
 	if(id != undefined){
@@ -68,7 +68,7 @@ router.get('/admin/categories/edit/:id', adminAuth,(req,res) => {
 	})
 })
 
-router.post('/category/edit', adminAuth,(req,res) => {
+router.put('/category/edit', adminAuth,(req,res) => {
 	let id = req.body.id;
 	let title = req.body.title;
 

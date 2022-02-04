@@ -35,7 +35,7 @@ router.post('/article/save', adminAuth, (req,res) => {
 	})
 })
 
-router.post('/article/delete', adminAuth, (req,res) => {
+router.delete('/article/delete', adminAuth, (req,res) => {
 	let id = req.body.id;
 
 	if(id != undefined){
@@ -75,7 +75,7 @@ router.get('/admin/articles/edit/:id', adminAuth, (req,res) => {
 	});
 });
 
-router.post('/article/edit', adminAuth,(req,res) => {
+router.put('/article/edit', adminAuth,(req,res) => {
 	let id = req.body.id;
 	let title = req.body.title;
 	let body = req.body.body;
