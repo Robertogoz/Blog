@@ -5,7 +5,6 @@ const port = 3030;
 const session = require('express-session')
 
 // express-session
-
 app.use(session({
     secret: 'password', cookie: {maxAge: 600000}
 }))
@@ -18,7 +17,6 @@ const userController = require("./Users/usersController");
 // models
 const Article = require('./Articles/Article');
 const Category = require('./Categories/Category');
-const User = require('./Users/User');
 
 // ejs
 app.set('view engine', 'ejs');
@@ -47,7 +45,6 @@ app.use('/', articlesController);
 app.use('/', userController);
 
 app.get('/', (req, res) => {
-
     Article.findAll({
         order:[
             ['id','DESC']
