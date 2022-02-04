@@ -7,7 +7,7 @@
 ### Techs used
 
 * JavaScript
-* Node.js
+* Node.js 16v
 * Express
 * Express-session
 * EJS
